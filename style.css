@@ -1,0 +1,256 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Roboto:wght@400;500&display=swap');
+
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+:root {
+    --text-base: #afb6c2;
+    --text-title: #d4ccb6;
+    --background: #191816;
+    --form-background: #24221f;
+    --primary-color: #ffc632;
+}
+
+body {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    height: 100vh;
+}
+
+main {
+    display: flex;
+    flex-flow: column;
+    gap: 20px;
+
+    min-width: 675px;
+    padding: 40px 40px 30px 40px;
+    background-color: var(--background);
+}
+
+.background {
+    background: url(./assets/side-image.jpg) right 75% / cover;
+}
+
+#form-login-signup {
+    width: 100%;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 4px;
+    padding: 55px 0px 40px 0px;
+    background-color: var(--form-background);
+}
+
+.header-form {
+    width: 70%;
+}
+
+.header-form div {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+
+h1 {
+    font-family: "Poppins", sans-serif;
+    color: var(--text-title)
+}
+
+.header-form p, label, ::-webkit-input-placeholder {
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+    color: var(--text-base);
+}
+
+fieldset {
+    border: none;
+    position: relative;
+}
+
+legend {
+    display: none;
+}
+
+form {
+    margin-top: 21px;
+    width: 70%;
+}
+
+.login {
+    display: flex;
+    flex-flow: column;
+}
+
+.login img {
+    width: 20px;
+    position: absolute;
+}
+
+.img-email {
+    top: 36px;
+    left: 12px;
+}
+
+.img-password {
+    bottom: 32px;
+    left: 12px;
+}
+
+.btn-senha  {
+    border: none;
+}
+
+.btn-senha img {
+    filter: invert(81%) sepia(10%) saturate(291%) hue-rotate(179deg) brightness(89%) contrast(89%);
+    width: 23px;
+    bottom: 30px;
+    right: 12px;
+    cursor: pointer;
+}
+
+.login input {
+    height: 44px;
+    border-radius: 4px;
+    border: 1px solid #868686;
+
+    color: var(--text-base);
+    margin: 5px 0px 20px 0px;
+    padding: 12px 20px 12px 40px;
+    background-color: transparent;
+}
+
+input#email:focus, input#password:focus {
+    border: none;
+    outline: 2px solid var(--primary-color);
+    box-shadow: 0px 0px 0px 2px #FFDE88;
+}
+
+
+.information {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.information div {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+input[type="checkbox"]{
+    display: none;
+}
+
+input[type="checkbox"] + label {
+    position: relative;
+    padding-left: 30px;
+    cursor: pointer;
+}
+
+input[type="checkbox"] + label::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 20px;
+    height: 20px;
+    
+    border-radius: 4px;
+    border: 1px solid #868686;
+    background-color: transparent;
+}
+
+input[type="checkbox"]:checked + label:before {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+}
+
+input[type="checkbox"]:checked + label::after {
+    content: "";
+    position: absolute;
+    left: 7px;
+    bottom: 7px;
+
+    width: 5px;
+    height: 10px;
+
+    border-right: 2px solid #473404;
+    border-bottom: 2px solid #473404;
+    transform: rotate(45deg);
+}
+
+.information a, form + p a, form + p {
+    font-family: "Poppins", sans-serif;
+    font-size: 14px;
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+#btn-login {
+    width: 100%;
+    height: 51px;
+    border: none;
+    border-radius: 4px;
+    margin: 20px 0px 14px 0px;
+    background-color: var(--primary-color);
+
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    font-size: 18px;
+    color: #473404;
+
+    cursor: pointer;
+}
+
+@media screen and (max-width: 768px) {
+    body {
+        grid-template-columns: 1fr;
+        background-color: var(--background);
+    }
+
+    main {
+        min-width: 100%;
+        padding: 40px 5% 40px 5%;
+    }
+
+    #form-login-signup {
+        padding: 40px 0px;
+    }
+
+    .background {
+        background-image: none;
+    }
+
+}
+
+@media screen and (max-width: 600px) {
+
+    main {
+        padding: 0px;
+    }
+
+    img[alt="Logo Camp.in"] {
+        padding: 40px 0px 0px 20px;
+    }
+
+    .header-form {
+        width: 100%;
+    }
+
+    #form-login-signup {
+        padding: 0px 20px;
+        background-color: transparent;
+    }
+
+    form {
+        width: 100%;
+    }
+}

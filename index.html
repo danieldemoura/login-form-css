@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>Login Form CSS</title>
+</head>
+<body>
+    <main>
+        <header>
+            <img src="./assets/logo.svg" alt="Logo Camp.in">
+        </header>
+        <section id="form-login-signup">
+            <header class="header-form">
+                <div>
+                    <img src="./assets/log-in.svg" alt="Imagem de uma seta apontando, representando que está se conectando a algo">
+                    <h1>Faça seu Login</h1>
+                </div>
+                <p>Entre com suas informações de cadastro.</p>
+            </header>
+
+            <form action="#" method="POST" autocomplete="off">
+                <fieldset class="login">
+                    <legend>Login</legend>
+                    <label for="email">E-mail:</label>
+                    <input id="email" type="email" autofocus name="email" placeholder="Digite seu e-mail">
+                    <img class="img-email" src="./assets/mail.svg" alt="Imagem de uma carta, representando um e-mail">
+
+                    <label for="password">Senha:</label>
+                    <input id="password" type="password" name="password" placeholder="Digite sua senha">
+                    <img class="img-password" src="./assets/lock.svg" alt="Imagem de um cadeado para representar o campo de senha">
+                    <button type="button"class="btn-senha">
+                        <img class="eye-password" src="./assets/eye-on.svg" alt="Desenho de um olho">
+                    </button>
+                </fieldset>
+                <fieldset class="information">
+                    <legend>Informações Extras</legend>
+                    <div>
+                        <input id="lembre-me" type="checkbox" name="lembre-me">
+                        <label for="lembre-me">Lembre-me</label>
+                    </div>
+
+                    <strong>
+                        <a href="#">Esqueci minha senha</a>
+                    </strong>
+                </fieldset>
+                <button id="btn-login">Entrar</button>
+            </form>
+            <p>
+                Não tem uma conta? <strong><a href="#">Registre-se</a></strong>
+            </p>
+        </section>
+    </main>
+    <div class="background">
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
